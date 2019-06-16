@@ -33,5 +33,7 @@ public class Date0604 {
         for(int item:arr){
             System.out.println(item);
         }
+        int[] arr1;
+        
     }
 }
