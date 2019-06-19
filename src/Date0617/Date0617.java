@@ -8,5 +8,8 @@ public class Date0617 {
         zhangsan.age=23;
         zhangsan.sex="nan";
         System.out.println(zhangsan);
+        for(int i=0;i<10;i++){
+            System.out.println(i);
+        }
     }
 }
