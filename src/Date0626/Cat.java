@@ -9,7 +9,18 @@ public class Cat {
     public int age;
     public int weight;
     public String color;
-
+    // class 构造方法。和class 名字一样。
+    public Cat(String name, int id, int age, int weight, String color){
+        this.name=name;
+        this.id=id;
+        this.age=age;
+        this.weight=weight;
+        this.color=color;
+    }
+    // 构造方法的重载 this
+    public Cat(String name, int id, int age, int weight){
+        this(name,id,age,weight,"#000");
+    }
     /**
      * @param name   名字
      * @param id     id

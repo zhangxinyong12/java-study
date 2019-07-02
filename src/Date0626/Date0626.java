@@ -3,7 +3,7 @@ package Date0626;
 public class Date0626 {
 
     public static void main(String[] args) {
-        Cat myCat=new Cat();
+        Cat myCat=new Cat("wang",1,20,30,"red");
         myCat.init("wang",1,20,30,"red");
 
         System.out.println(myCat.getAge());
