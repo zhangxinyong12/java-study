@@ -9,6 +9,23 @@ public class Cat {
     public int age;
     public int weight;
     public String color;
+    static  double price=10.5;
+    // 静态代码块  静态变量
+    // 从上到下
+    static {
+        int a=30;
+        int b=20;
+        price=a+b;
+    }
+    static {
+        price=0.000001;
+    }
+    static double add(int a,int b){
+        return  a+b+price;
+    }
+    static double add(int a){
+        return  a+price;
+    }
     // class 构造方法。和class 名字一样。
     public Cat(String name, int id, int age, int weight, String color){
         this.name=name;

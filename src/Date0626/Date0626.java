@@ -6,8 +6,10 @@ public class Date0626 {
         Cat myCat=new Cat("wang",1,20,30,"red");
         myCat.init("wang",1,20,30,"red");
 
-        System.out.println(myCat.getAge());
-        System.out.println(myCat.getAge(20));
-
+        System.out.println(Cat.add(2,3));
+        Cat.price=1000;
+        System.out.println(Cat.price);
+        System.out.println(Cat.add(2,3));
+        System.out.println(Cat.add(2));
     }
 }
