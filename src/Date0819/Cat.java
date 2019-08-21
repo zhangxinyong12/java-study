@@ -2,6 +2,9 @@ package Date0819;
 
 public class Cat extends Animal {
     public String name;
+    public String[] arr1 = new String[10];
+    public final String[] arr = arr1;
+
 
     public Cat(String name) {
         super("猫:" + name);
