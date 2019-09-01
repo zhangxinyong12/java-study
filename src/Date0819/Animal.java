@@ -4,8 +4,7 @@ public class Animal {
     public String name;
 
     public Animal(String name) {
-        this.name = name;
-        name = name;
+        this.name ="动物的"+ name;
     }
 
     public String getName() {

@@ -3,13 +3,15 @@ package Date0901;
 import Date0819.Cat;
 
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 
 public class Date0901 {
 
     private static Class catCalzz;
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException, InvocationTargetException {
         System.out.println("2019-09-01---------");
         Object obj = new Object();
         printObj(obj);
@@ -34,10 +36,21 @@ public class Date0901 {
         printArr(1);
         printArr(1, 2, 34);
         Cat cat = new Cat("my_cat");
-        catCalzz = cat.getClass();
-        Field field = catCalzz.getField("name");
-        System.out.println(field);
+        System.out.println(cat.getName());
 
+        catCalzz = cat.getClass();
+        Field nameField = catCalzz.getField("name");
+        System.out.println(nameField.get(cat));
+        nameField.set(cat, "-----name");
+        System.out.println("set name" + nameField.get(cat));
+        for (Field field : catCalzz.getDeclaredFields()) {
+            System.out.println(field.getType() + "___" + field.getName());
+        }
+
+        System.out.println("--------------------------");
+        Method catMethod = catCalzz.getMethod("getName");
+        System.out.println(catMethod.invoke(cat));
+        System.out.println(cat.getName());
     }
 
     private static void printObj(Object obj) {
