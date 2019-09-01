@@ -1,7 +1,15 @@
 package Date0901;
 
+import Date0819.Cat;
+
+import java.lang.reflect.Field;
+
+
 public class Date0901 {
-    public static void main(String[] args) {
+
+    private static Class catCalzz;
+
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
         System.out.println("2019-09-01---------");
         Object obj = new Object();
         printObj(obj);
@@ -18,11 +26,18 @@ public class Date0901 {
 //        str1 = scanner.nextLine();
 //        System.out.println("请输入str2");
 //        str2 = scanner.nextLine();
-//        System.out.println(str1 == str2);
+//        System.out.println(str1 == str2   );
 //        System.out.println(str1.equals(str2));
-        Class clazz =str1.getClass();
+        Class clazz = str1.getClass();
         System.out.println(clazz);
         System.out.println(clazz.getSimpleName());
+        printArr(1);
+        printArr(1, 2, 34);
+        Cat cat = new Cat("my_cat");
+        catCalzz = cat.getClass();
+        Field field = catCalzz.getField("name");
+        System.out.println(field);
+
     }
 
     private static void printObj(Object obj) {
@@ -32,7 +47,8 @@ public class Date0901 {
         System.out.println(obj.hashCode());
     }
 
-    private static void printStr(String str) {
+    private static void printArr(int a, int... arges) {
+        System.out.println(arges);
 
     }
 }
